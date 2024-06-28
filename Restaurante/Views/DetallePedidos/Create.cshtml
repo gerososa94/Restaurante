@@ -1,0 +1,43 @@
+﻿@model Restaurante.Models.DetallePedido
+
+@{
+    ViewData["Title"] = "Crear Detalle Pedido";
+}
+
+<h1>Crear Detalle Pedido</h1>
+
+<h4>Detalle Pedido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="PedidoID" class="control-label"></label>
+                <input asp-for="PedidoID" class="form-control" />
+                <span asp-validation-for="PedidoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductoID" class="control-label"></label>
+                <input asp-for="ProductoID" class="form-control" />
+                <span asp-validation-for="ProductoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cantidad" class="control-label"></label>
+                <input asp-for="Cantidad" class="form-control" />
+                <span asp-validation-for="Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
